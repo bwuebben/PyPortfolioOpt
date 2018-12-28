@@ -49,7 +49,8 @@ class CVAROpt(BaseOptimizer):
             raise TypeError("returns are not a dataframe")
         self.returns = returns
         self.tickers = returns.columns
-        super().__init__(returns.shape[1], weight_bounds)  # bounds
+        # Bernd: Fixed super for python 2.7
+        super(CVAROpt,self).__init__(returns.shape[1], weight_bounds)  # bounds
 
     def min_cvar(self, s=10000, beta=0.95, random_state=None):
         """
