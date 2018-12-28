@@ -75,7 +75,7 @@ class EfficientFrontier(BaseOptimizer):
             self.tickers = list(cov_matrix.columns)
         self.n_assets = len(self.tickers)
 
-        super().__init__(self.n_assets, weight_bounds)
+        super(EfficientFrontier,self).__init__(self.n_assets, weight_bounds)
 
         if not isinstance(gamma, (int, float)):
             raise ValueError("gamma should be numeric")
