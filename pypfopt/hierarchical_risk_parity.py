@@ -8,8 +8,7 @@ import scipy.cluster.hierarchy as sch
 import scipy.spatial.distance as ssd
 
 # This code has been reproduced(with modification) from the paper:
-# López de Prado, M. (2016). Building Diversified Portfolios that Outperform Out of Sample.
-# The Journal of Portfolio Management, 42(4), 59–69. https: // doi.org / 10.3905 / jpm.2016.42.4.059
+# Lopez de Prado, M. (2016). Building Diversified Portfolios that Outperform Out of Sample.
 
 
 def _get_cluster_var(cov, cluster_items):
